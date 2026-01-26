@@ -1,6 +1,17 @@
 # Task Manager Application
 
-A simple and elegant task management application built with Angular 17
+A simple and elegant task management application built with Angular 17. See the preview below:
+
+<img width="1496" height="1332" alt="tm1" src="https://github.com/user-attachments/assets/2293d3ff-4da0-413c-a375-4913f145df25" />
+
+<img width="1388" height="432" alt="tm2" src="https://github.com/user-attachments/assets/8db2880b-4787-409f-a266-8877ca1348af" />
+
+<img width="1280" height="426" alt="tm3" src="https://github.com/user-attachments/assets/ebfa9acb-ca87-42d1-a855-ed6e5eace8de" />
+
+https://github.com/user-attachments/assets/2185e713-d1a6-43df-9ebb-2d7f36783dc7
+
+https://github.com/user-attachments/assets/a896c1fc-6aab-461c-84c3-99503235a5fd
+
 
 ## Features
 
