@@ -1,0 +1,21 @@
+<div class="task-list-container">
+  <h2 class="task-list-title">
+    Tasks
+    <span class="task-count" *ngIf="tasks().length > 0">
+      ({{ totalTasksCount() }})
+    </span>
+  </h2>
+  
+  <div class="task-list" *ngIf="tasks().length > 0; else emptyState">
+    <app-task-item
+      *ngFor="let task of tasks()"
+      [task]="task"
+    ></app-task-item>
+  </div>
+
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <p>No tasks yet. Add one above to get started!</p>
+    </div>
+  </ng-template>
+</div>

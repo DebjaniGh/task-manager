@@ -1,0 +1,26 @@
+<div class="task-item" [class.completed]="task.completed">
+  <div class="task-content">
+    <input
+      type="checkbox"
+      [checked]="task.completed"
+      (change)="toggleTask()"
+      class="task-checkbox"
+      id="task-{{ task.id }}"
+    />
+    <label
+      for="task-{{ task.id }}"
+      class="task-title"
+      [class.completed-text]="task.completed"
+    >
+      {{ task.title }}
+    </label>
+  </div>
+  <button
+    type="button"
+    class="delete-button"
+    (click)="deleteTask()"
+    aria-label="Delete task"
+  >
+    ×
+  </button>
+</div>
