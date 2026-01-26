@@ -2,13 +2,6 @@ import { Injectable, signal, computed } from '@angular/core';
 import { Task } from '../models/task.model';
 import tasksData from '../data/tasks.json';
 
-interface TaskJson {
-  id: number;
-  title: string;
-  completed: boolean;
-  createdAt: string;
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -29,7 +22,8 @@ export class TaskService {
 
   constructor() {
     // Initialize with tasks from JSON file
-    const initialTasks: Task[] = (tasksData as TaskJson[]).map(task => ({
+    // JSON has createdAt as string, so we convert it to Date
+    const initialTasks: Task[] = (tasksData as any[]).map(task => ({
       id: task.id,
       title: task.title,
       completed: task.completed,
