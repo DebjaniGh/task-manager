@@ -1,6 +1,6 @@
 # Task Manager Application
 
-A simple and elegant task management application built with Angular.
+A simple and elegant task management application built with Angular 17
 
 ## Features
 
@@ -47,12 +47,12 @@ This application follows Angular best practices:
 
 - **Standalone Components**: All components are standalone for better modularity
 - **Service-based State Management**: Tasks are managed through a centralized service
-- **Reactive Programming**: Uses RxJS Observables for reactive data flow
+- **Reactive Programming**: Uses Angular Signals for reactive data flow; no need to do subscription cleanup as compared to RxJs.
 - **Component Separation**: Clear separation of concerns with dedicated components for each feature
 
 ## Technologies Used
 
 - Angular 17
 - TypeScript
-- RxJS
+- Angular Signals
 - CSS3 (with modern styling)
