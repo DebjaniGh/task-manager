@@ -1,0 +1,26 @@
+<div class="tabs">
+  <div class="tablist" role="tablist">
+    @for (tab of tabs; track tab.id) {
+      <button
+        class="tab"
+        role="tab"
+        #tabBtn
+        [class.active]="tab === selectedTab()"
+        (click)="activate(tab)"
+        (keydown)="handleKeydown($event, tab)"
+        [attr.aria-selected]="tab === selectedTab()"
+        [attr.aria-controls]="tab.id + '-panel'"
+      >
+        {{ tab.label }}
+      </button>
+    }
+  </div>
+
+  <div
+    class="tab-content"
+    role="tabpanel"
+    [attr.id]="selectedTab().id + '-panel'"
+  >
+    {{ selectedTab().content }}
+  </div>
+</div>
