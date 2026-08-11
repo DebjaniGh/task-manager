@@ -11,7 +11,7 @@ export class TaskService {
   // Public readonly signal for components to access
   public tasks = this.tasksSignal.asReadonly();
   
-  // Computed signals for derived state (optional but useful)
+  // Computed signals for derived state
   public completedTasksCount = computed(() => 
     this.tasksSignal().filter(task => task.completed).length
   );
