@@ -36,6 +36,11 @@ export class TabsComponent {
   }
 
   handleKeydown(event: KeyboardEvent, tab: ITab) {
+    const navKeys = ["ArrowRight", "ArrowLeft", "Home", "End"];
+    if (!navKeys.includes(event.key)) return;
+
+    // prevent default beahvior of the key only if it
+    // is one of the above
     event.preventDefault();
 
     if (event.key === "ArrowRight") {
