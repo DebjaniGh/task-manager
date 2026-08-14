@@ -1,0 +1,47 @@
+<!-- Signals based implementation begins -->
+<!-- <div class="search-container"> -->
+<!-- Search box: value is bound to the searchTerm signal, and every keystroke
+       pushes the new value back into it via updateSearchTerm() -->
+<!-- <input
+    class="search-input"
+    [value]="searchTerm()"
+    (input)="updateSearchTerm($event)"
+    placeholder="Search Users ..."
+  /> -->
+
+<!-- filteredUsers() is a computed signal, so this block re-evaluates
+       automatically whenever the search term changes -->
+<!-- @if (filteredUsers().length === 0) { -->
+<!-- Empty state: shown when nothing matches the current search term -->
+<!-- <p class="no-users">No Users found.</p>
+  } @else {
+    <ul class="user-list"> -->
+<!-- track user.id lets Angular reuse DOM nodes instead of rebuilding the list -->
+<!--  @for (user of filteredUsers(); track user.id) {
+        <li class="user">{{ user.name }}</li>
+      }
+    </ul>
+  }
+</div> -->
+<!-- Signals based implementation ends -->
+
+<!-- RxJS implementation begins-->
+<div class="search-container">
+  <input
+    class="search-input"
+    [formControl]="searchControl"
+    placeholder="Search Users ..."
+  />
+  @if (filteredUsers$ | async; as users) {
+    @if (users.length === 0) {
+      <p>No users found.</p>
+    } @else {
+      <ul class="user-list">
+        @for (user of users; track user.id) {
+          <li class="user">{{ user.name }}</li>
+        }
+      </ul>
+    }
+  }
+</div>
+<!-- RxJS implementation ends-->

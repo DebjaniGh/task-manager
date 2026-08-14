@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+.search-container {
+  width: 350px;
+  max-width: 90%;
+}
+
+.search-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.search-input:focus-visible {
+  outline: 1.5px solid #ccc;
+  outline-offset: 1px;
+}
+
+.user-list {
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  border: 0.2px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+.user {
+  padding: 6px 8px;
+}
+
+.user:hover {
+  background-color: #f0efef;
+}
+
+.no-users {
+  text-align: center;
+  padding: 10px 12px;
+}
